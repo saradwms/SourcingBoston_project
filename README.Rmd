@@ -1,5 +1,5 @@
 ---
-title: "README"
+title: "Sourcing Boston Hackathon Project, Team Gourmet Disco Apocalypse"
 author: "Sara Williams"
 date: "11/15/2018"
 output: html_document
@@ -9,11 +9,24 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+#From Boston to Hong Kong: The Impact of Climate Change and Extreme Weather Events on Food Access and Prices
+Link to presentation: https://docs.google.com/presentation/d/1ISf1QxBqlCWctK_5Gzr-e8nxVNTNfA4bXQAuN4jxCa8/edit#slide=id.g47dd8785b0_0_80 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+##The Event: https://github.com/briromer/sourcingboston
+Sourcing Boston
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Team Members
+Team members day 1: Cat Anderson, Don Blair, Lisa Button, Kevin Huang, Katrina Miller, Aaron Pradhan, Pankaj Shah, Daisy Tam, Sara Williams
+
+Team members day 2: Cat Anderson, Don Blair, Lisa Button, Kevin Huang, Pankaj Shah, Daisy Tam, Sara Williams
+
+##Our Process:
+
+
+
+##The Impact of Sea level Rise on Boston's Food Security
+
+
 
 ```{r cars}
 summary(cars)
