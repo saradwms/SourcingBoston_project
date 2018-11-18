@@ -2,7 +2,7 @@
 title: "Sourcing Boston Hackathon Project, Team Gourmet Disco Apocalypse"
 author: "Sara Williams"
 date: "11/15/2018"
-output: html_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
