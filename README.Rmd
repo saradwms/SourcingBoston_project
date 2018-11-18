@@ -12,8 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 #From Boston to Hong Kong: The Impact of Climate Change and Extreme Weather Events on Food Access and Prices
 Link to presentation: https://docs.google.com/presentation/d/1ISf1QxBqlCWctK_5Gzr-e8nxVNTNfA4bXQAuN4jxCa8/edit#slide=id.g47dd8785b0_0_80 
 
-##The Event: https://github.com/briromer/sourcingboston
-Sourcing Boston
+##The Event: Sourcing Boston
+https://github.com/briromer/sourcingboston
 
 ## Team Members
 Team members day 1: Cat Anderson, Don Blair, Lisa Button, Kevin Huang, Katrina Miller, Aaron Pradhan, Pankaj Shah, Daisy Tam, Sara Williams
@@ -22,22 +22,66 @@ Team members day 2: Cat Anderson, Don Blair, Lisa Button, Kevin Huang, Pankaj Sh
 
 ##Our Process:
 
+Our group came together under the idea of looking at the impact of climate change on Boston's food security. Daisy Tam also brought data on prices of vegetables in Hong Kong to look at how extreme weather (Typhoons) affects food prices. We were hoping to compare weather+food prices in Boston vs. Hong Kong but never found the data. We also wanted temporal weather data and storm event data. We quickly learned that time and data-accessibility are huge limits during a hackathon.
 
+Within just the last year, Boston has experienced some very strong storms that caused major flooding. So I wanted us to look at how flooding impacts access to food -- specifically at how extreme weather events amplified by sea level rise may cut off access to food, by breaking points in the supply chain by hindering transport or by flooding areas with food retailers. Another thing that I wanted to highlight in the analysis was how sea level rise and flooding will impact Boston's most vulnerable populations' ability to access food, and food that they can afford or use SNAP to purchase. 
 
 ##The Impact of Sea level Rise on Boston's Food Security
 
+Our team produced an interactive map to visualize the impact of sea level rise on Boston's food accessibility. All files used for the project are in the Spatial_data folder
+
+### Map Platform
+
+I used Carto (https://carto.com) to get all of the spatial data into one map platform. I was able to get a free account with my GitHub Student Developer Pack. The platform was fairly easy to pick up with just a basic knowledge of how mapping tools function. 
+
+### Layers
+All files for the layers used in the map can be found in the Carto_layers folder
+
+#### Food Retailers
+File: Food_locations_all.csv
+
+I merged the list of boston food retailers and list of massachusetts retailers accepting SNAP (Supplemental Nutritional Assistance Program) to get a file with all food retailers in Boston (Suffolk County) and if they accept SNAP. I also added the Greater Boston Food Bank and the New England Produce Center (one of the major food distributors in the area) to the list.
+
+#### 100 years 7.5ft Storm Flood
+Source: https://data.boston.gov/dataset/sea-level-rise-plus-7-5-feet
+
+"To illustrate and evaluate the impact of the higher 100-year coastal floods in the future, we produced a dataset representing stillwater flood elevations over land for flood heights of seven-and-one-half-feet above mean higher high water (MHHW, the average of the higher high water elevation of each tidal day.) The data includes horizontal spatial extent of seven-and-one-half-foot coastal floods above mean higher high water in the City of Boston."
+
+#### 2070s 36in Sea Level Rise at High Tide & 2050s 21in Sea Level Rise at High Tide
+Source: https://data.boston.gov/dataset/36inch-sea-level-rise-high-tide1
+
+Source: https://data.boston.gov/dataset/21inch-sea-level-rise-high-tide1 
+
+"Area of potential coastal and riverine flooding in Boston under various sea level rise scenarios (9-inch in 2030s, 21-inch in 2050s, and 36-inch in 2070s) at high tide and in the event of storms with an annual exceedance probability (AEP) of 10 and 1 percent."
+
+#### Healthy Food Availability
+Source: https://github.com/briromer/sourcingboston/tree/master/data/mapc
+
+This data was provided by the Sourcing Boston Hackathon. I used the FoodAccessScore_QuarterMile data. The file contained Food Access Scores (2016) measuring healthy food availability 1/4 mile sheds. But what does A food access score represent?
+
+From: https://as.tufts.edu/uep/sites/all/themes/asbase/assets/documents/fieldProjectReports/2016/MAfoodAccessIndex.pdf 
+"The range of index scores is from 0 through 15. A score of 0 represents lack of access to a food retailer of any weight category at the specified network distance. A score of 15 represents access to at least one food retailer of each weight category at the specified network distance. Very high (12-15) index scores indicate guaranteed access to at least one large-scale grocery store or supercenter within the specified network distance. Very low (0-3) index scores indicate guaranteed lack of access to a grocery store of any scale. Low (3- 6) index scores indicate likely access to a smaller-scale grocery store, farmers market, or fruit and vegetable market. Moderate (6-9) and high (9-12) index scores indicate increasing likelihood of access to a large scale grocery store or super center."
+
+#### Older Adult Population & Low to no income
+Source: https://data.boston.gov/dataset/climate-ready-boston-social-vulnerability1
+
+"Social vulnerability is defined as the disproportionate susceptibility of some social groups to the impacts of hazards, including death, injury, loss, or disruption of livelihood. In this dataset from Climate Ready Boston, groups identified as being more vulnerable are older adults, children, people of color, people with limited English proficiency, people with low or no incomes, people with disabilities, and people with medical illnesses.
+
+Older adults (those over age 65) have physical vulnerabilities in a climate event; they suffer from higher rates of medical illness than the rest of the population and can have some functional limitations in an evacuation scenario, as well as when preparing for and recovering from a disaster. Furthermore, older adults are physically more vulnerable to the impacts of extreme heat. Beyond the physical risk, older adults are more likely to be socially isolated. Without an appropriate support network, an initially small risk could be exacerbated if an older adult is not able to get help.Data source: 2008-2012 American Community Survey 5-year Estimates (ACS) data by census tract for population over 65 years of age.
+
+A lack of financial resources impacts a household’s ability to prepare for a disaster event and to support friends and neighborhoods. For example, residents without televisions, computers, or data-driven mobile phones may face challenges getting news about hazards or recovery resources. Renters may have trouble finding and paying deposits for replacement housing if their residence is impacted by flooding. Homeowners may be less able to afford insurance that will cover flood damage. Having low or no income can create difficulty evacuating in a disaster event because of a higher reliance on public transportation. If unable to evacuate, residents may be more at risk without supplies to stay in their homes for an extended period of time. Low- and no-income residents can also be more vulnerable to hot weather if running air conditioning or fans puts utility costs out of reach.
+Data source: 2008-2012 American Community Survey 5-year Estimates (ACS) data by census tract for low-to- no income populations. The data represents a calculated field that combines people who were 100% below the poverty level and those who were 100–149% of the poverty level"
+
+## The Map
+
+https://saradwms.carto.com/builder/2b09e7af-a9a3-4b46-8600-dbbfa8627da5/embed
+
+## Other Data / Graphs
+
+Within the Spatial_data folder is the Drowned_stores folder that contails to files of what stores would be affected by flooding in two different scenarios. These files were created using tools in Carto, and were used to create the graphs shown in the associated blog post.
+
+In the Boston_weather folder is a file, boston_cleaned.csv, of boston weather from 2013 to 2018. 
 
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
